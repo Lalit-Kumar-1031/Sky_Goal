@@ -13,4 +13,20 @@ class NavbarData
     SavedScreen(),
     AccountScreen(),
   ];
+
+  static List<String> students=[
+    'assets/images/stu1.jpg',
+    'assets/images/stu2.jpg',
+    'assets/images/stu3.jpg',
+    'assets/images/stu4.jpg',
+  ];
+
+  static List<String> studentName=[
+    'Lalit Kumar',
+    'Riya Singh',
+    'Sonam Sharma',
+    'Simran ',
+  ];
+
 }
+

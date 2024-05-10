@@ -24,10 +24,11 @@ class _HomeHeaderWidgetState extends State<HomeHeaderWidget> {
       child: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.07,
+            height: MediaQuery.of(context).size.height * 0.05,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
