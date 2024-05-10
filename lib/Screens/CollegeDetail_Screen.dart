@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skygoal/Components/aboutCollge_widget.dart';
 import 'package:skygoal/Components/hostel_info_widget.dart';
+import 'package:skygoal/Screens/BookMark_Screens/Bookmark_Screen.dart';
 
 class CollegeDetailScreen extends StatefulWidget {
   const CollegeDetailScreen({super.key});
@@ -19,7 +20,9 @@ class _CollegeDetailScreenState extends State<CollegeDetailScreen> {
           iconTheme: IconThemeData(color: Colors.white),
           actions: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => BookMarkScreen(),));
+              },
               child: Container(
                 height: 35,
                 width: 35,
@@ -45,6 +48,7 @@ class _CollegeDetailScreenState extends State<CollegeDetailScreen> {
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),
+            SizedBox(height: 10,),
             Container(
               width: MediaQuery.of(context).size.width,
               padding: EdgeInsets.symmetric(horizontal: 20),

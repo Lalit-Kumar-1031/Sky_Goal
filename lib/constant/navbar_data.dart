@@ -28,5 +28,13 @@ class NavbarData
     'Simran ',
   ];
 
+  static List<String> bottomsheetOptrions=[
+    'Bachelor of Technology',
+    'Bachelor of Architecture',
+    'Pharmacy',
+    'Law',
+    'Management',
+  ];
+
 }
 

@@ -28,6 +28,9 @@ class CollegeWidget extends StatefulWidget {
 }
 
 class _CollegeWidgetState extends State<CollegeWidget> {
+
+  bool saved=false;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -79,7 +82,11 @@ class _CollegeWidgetState extends State<CollegeWidget> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(40)),
                     child: IconButton(
-                        onPressed: () {}, icon: Icon(Icons.bookmark_border)),
+                        onPressed: () {
+                          setState(() {
+                            saved=!saved;
+                          });
+                        }, icon: Icon(saved==true?Icons.bookmark:Icons.bookmark_border,color:Color.fromRGBO(14, 60, 110, 1),)),
                   ),
                 ],
               ),

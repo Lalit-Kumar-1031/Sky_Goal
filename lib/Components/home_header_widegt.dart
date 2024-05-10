@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
-
+import 'package:skygoal/Screens/Notifications/NotificationScreen.dart';
 
 class HomeHeaderWidget extends StatefulWidget {
   const HomeHeaderWidget({super.key});
@@ -12,7 +12,7 @@ class HomeHeaderWidget extends StatefulWidget {
 class _HomeHeaderWidgetState extends State<HomeHeaderWidget> {
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.35,
       padding: EdgeInsets.symmetric(horizontal: 20),
@@ -54,10 +54,15 @@ class _HomeHeaderWidgetState extends State<HomeHeaderWidget> {
               ),
               badges.Badge(
                 showBadge: true,
-                position:
-                badges.BadgePosition.topEnd(top: 11, end: 13),
+                position: badges.BadgePosition.topEnd(top: 11, end: 13),
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NotificationScreen(),
+                          ));
+                    },
                     icon: Icon(
                       Icons.notifications,
                       color: Colors.white,

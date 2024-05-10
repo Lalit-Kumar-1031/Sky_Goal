@@ -107,7 +107,13 @@ class _CollegelistScreenState extends State<CollegelistScreen> {
                   placeDesc: 'More than 1000+ students have been placed',
                   rating: 4.3,
                   view: '468+',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CollegeDetailScreen(),
+                        ));
+                  },
                   collegeimg: 'assets/images/college2.jpg',
                 ),
                 SizedBox(
